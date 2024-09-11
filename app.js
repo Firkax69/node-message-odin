@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const path = require("node:path");
-const { ppid } = require('node:process');
 
 const messages = [
     {
@@ -19,6 +18,11 @@ const messages = [
 // Route handler for rendering the index page
 app.get('/', (req, res) => {
   res.render('index', {title: 'Mini Messageboard', messages: messages});
+})
+
+// Route handler for rendering the form
+app.get('/new', (req, res) => {
+  res.render('form');   // Render the 'form.ejs' template
 })
 
 // Set the view engine (assuming you are using EJS)
