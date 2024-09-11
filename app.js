@@ -32,18 +32,23 @@ app.use(express.urlencoded({extended: true}));
 
 // Route handler for form submission (POST request)
 app.post('/new', (req, res) => {
-  const {author, message} = req.body;
-
-  messages.push({
-    text: message,
-    user: author,
-    added: new Date()
-  });
-
+  console.log(req.body);  // Debugging to check form data
   
-  // Redirect to the home page to display the new message
+  const messageUser = req.body.user;
+  const messageText = req.body.message;
+
+  if (messageUser && messageText) {
+      messages.push({ 
+          text: messageText, 
+          user: messageUser, 
+          added: new Date() 
+      });
+  } else {
+      console.log("Form data is missing or incomplete.");
+  }
+
   res.redirect('/');
-})
+});
 
 
 
