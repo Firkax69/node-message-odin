@@ -25,6 +25,18 @@ app.get('/new', (req, res) => {
   res.render('form');   // Render the 'form.ejs' template
 })
 
+// Route handler for showing message details
+app.get('/message/:id', (req, res) => {
+  const messageId = req.params.id;
+  const message = messages[messageId];
+
+  if (message) {
+    res.render('message', {title: 'Message Details', message: message});
+  } else {
+    res.status(404).send('Message not found');
+  }
+})
+
 // MIDDLEWARE: Before handling the form data, make sure that your Express app can parse POST request bodies. 
 app.use(express.urlencoded({extended: true}));
 

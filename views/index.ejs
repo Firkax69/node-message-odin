@@ -8,11 +8,14 @@
 <body>
     <h1><%= title %></h1>
     <ul>
-        <% messages.forEach(function(message) { %>
+        <% messages.forEach(function(message, index) { %>
             <li>
                 <strong><%= message.user %>:</strong> <%= message.text %>
                 <br>
                 <small>Added on: <%= message.added.toLocaleString() %></small>
+
+                <!-- Open link to the message details page -->
+                <a href="/message/<%= index %>">Open</a>
             </li>
         <% }); %> 
     </ul>
