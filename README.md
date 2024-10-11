@@ -10,7 +10,9 @@ Project was deployed using Koyeb.app
 
 ## 💡 Features:
 Web Application Development: Built an interactive message board using Node.js and Express for server-side functionality.<br/>
+
 Template Engine Integration: Implemented EJS for dynamic HTML rendering, enhancing the user interface.<br/>
+
 Middleware Utilization: Configured Express middleware (express.urlencoded) to parse incoming form data effectively.<br/>
 
 -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
