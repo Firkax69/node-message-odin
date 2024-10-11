@@ -3,7 +3,7 @@
 The Message Board allows users to create, open and read new messages. The project was build using simple Express, NodeJS and JavsScript.
 
 
-Project was deployed using Koyeb.app
+Project was deployed using Koyeb.app <br/>
 👉 See it live [here](https://parallel-buzzard-ihorkovalevskyi-97c43156.koyeb.app/)
 
 -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
